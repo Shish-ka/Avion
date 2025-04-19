@@ -1,0 +1,343 @@
+@font-face {
+    font-family: ClashDisplay;
+    src: url(../fonts/ClashDisplay-Regular.ttf);
+}
+@font-face {
+    font-family: Satoshi;
+    src: url(../fonts/Satoshi-Regular.ttf);
+}
+:root {
+    --hFont: ClashDisplay;
+    --font: Satoshi;
+    --white: white;
+    --black: black;
+    --text: rgba(34, 32, 46, 1);
+    --text2: rgba(42, 37, 75, 1);
+    --bBc: rgba(249, 249, 249, 1);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var(--font);
+    color: var(--black);
+}
+*::first-letter {
+    text-transform: uppercase;
+}
+a {
+    text-decoration: none;
+}
+ul {
+    list-style-type: none;
+}
+img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.cd {
+    font-family: var(--hFont);
+}
+.en {
+    font-size: 18px;
+}
+.ty {
+    font-size: 20px;
+}
+.tfy {
+    font-size: 24px;
+}
+.t2ty {
+    font-size: 32px;
+}
+.btn {
+    height: 55px;
+    width: 170px;
+    background-color: var(--bBc);
+    padding: 16px 32px;
+    color: var(--text2);
+}
+.btn2 {
+    height: 55px;
+    width: 170px;
+    background-color: rgba(249, 249, 249, 0.15);
+    padding: 16px 32px;
+    color: var(--white);
+}
+.btn3 {
+    padding: 16px 32px;
+    color: var(--white);
+    background-color: var(--text2);
+}
+.btn4 {
+    padding: 16px 32px;
+    color: var(--text2);
+    background-color: var(--white);
+}
+.inp {
+    height: 55px;
+    width: 355px;
+    border: none;
+    padding: 0 32px;
+    color: var(--text2);
+    font-size: 16px;
+}
+.inp2 {
+    height: 55px;
+    width: 510px;
+    border: none;
+    padding: 0 32px;
+    background-color: rgba(255, 255, 255, 0.15);
+    color: var(--white);
+    font-size: 16px;
+}
+.inp::placeholder {
+    color: var(--text2);
+    opacity: 20%;
+    font-size: 16px;
+}
+.inp2::placeholder {
+    color: var(--white);
+    font-size: 16px;
+}
+
+#app {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+header {
+    height: 130px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: var(--white);
+}
+footer {
+    height: 380px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 4% 5% 1% 5%;
+    background-color: var(--text2);
+}
+header>ul, header>nav ul, header>ul div, footer>section, footer>ul, footer>ul li:last-child {
+    display: flex;
+}
+
+header>ul, footer>section, footer>ul {
+    justify-content: space-between;
+}
+footer>section ul {
+    display: grid;
+    align-content: start;
+    row-gap: 12px;
+}
+footer>section ul li a, footer>ul li {
+    font-size: 14px;
+    color: var(--white);
+}
+footer>section ul li:first-child a {
+    font-size: 16px;
+    font-family: var(--hFont);
+    pointer-events: none;
+}
+footer>ul {
+    padding-top: 1%;
+    border-top: 1px solid rgba(78, 77, 147, 1);;
+}
+footer>ul li:last-child {
+    column-gap: 25px;
+}
+header img, main #fh2>ul img {
+    height: 16px;
+    width: 16px;
+}
+footer img {
+    height: 20px;
+    width: 20px;
+    object-fit: fill;
+}
+footer>section ul:last-child li:last-child {
+    display: flex;
+    align-items: center;
+}
+footer>section ul:last-child li:last-child a {
+    font-size: 16px;
+}
+header>ul a {
+    color: var(--text);
+}
+header div {
+    column-gap: 16px;
+}
+header div li:last-child {
+    display: none;
+}
+
+header>span {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+header>nav ul {
+    justify-content: center;
+    column-gap: 45px;
+}
+header>nav a {
+    color: rgba(114, 110, 141, 1);
+}
+
+
+
+main #ft {
+    height: 705px;
+    position: relative;
+    display: grid;
+}
+main #fh {
+    padding: 4% 5%;
+    display: grid;
+    grid-template-columns: repeat(2, 635px);
+    grid-template-rows: 478px;
+    justify-content: space-between;
+}
+main #ft>img {
+    position: absolute;
+}
+main #ft>ul {
+    height: 445px;
+    width: 630px;
+    background-color: var(--white);
+    position: absolute;
+    justify-self: right;
+    align-self: center;
+    right: 5%;
+    padding: 55px;
+    display: grid;
+    align-content: space-between;
+}
+main #fh>ul {
+    background-color: var(--text2);
+    padding: 55px;
+    display: grid;
+    align-content: space-between;
+}
+main #ft>ul div {
+    display: grid;
+    row-gap: 20px;
+}
+main #fh>ul div {
+    display: grid;
+    row-gap: 12px;
+}
+main #fh>ul div li {
+    color: var(--white);
+}
+main #ft>ul div>li:first-child {
+    color: var(--text);
+}
+main #ft>ul div>li:last-child {
+    color: rgba(91, 86, 118, 1);
+}
+
+main #sd, #sd>ul, #sd>ul li, #td>ul, #td>ul li, #td>ul li div {
+    display: flex;
+    justify-content: space-between;
+}
+main #sd {
+    height: 475px;
+    padding: 6% 5%;
+    color: var(--text2);
+    flex-direction: column;
+}
+main #td {
+    height: 635px;
+    padding: 1% 5% 3% 5%;
+    color: var(--text2);
+    display: grid;
+    align-content: space-between;
+}
+main #sd>p {
+    text-align: center;
+}
+main #td>a {
+    justify-self: center;
+}
+main #sd>ul li {
+    flex-direction: column;
+    padding: 48px;
+    row-gap: 10px;
+    width: 305px;
+    background-color: var(--bBc);
+}
+main #td>ul li {
+    flex-direction: column;
+    row-gap: 25px;
+    width: 305px;
+}
+main #td>ul li div {
+    flex-direction: column;
+    row-gap: 10px;
+}
+main #sd>ul img {
+    height: 22px;
+    width: 22px;
+    object-fit: fill;
+}
+main #td>ul img {
+   height: 375px; 
+}
+
+main #fh2 {
+    height: 445px;
+    display: grid;
+    position: relative;
+}
+main #fh2>img {
+    position: absolute;
+}
+main #fh2>ul {
+    position: absolute;
+    justify-self: center;
+    align-self: center;
+    display: grid;
+    row-gap: 30px;
+    justify-items: center;
+}
+main #fh2>ul div:first-child {
+    display: grid;
+    row-gap: 30px;
+}
+main #fh2>ul div:first-child div {
+    display: grid;
+    row-gap: 12px;
+}
+main #fh2>ul div:first-child ul {
+    display: flex;
+    justify-content: center;
+    column-gap: 35px;
+}
+main #fh2>ul div:first-child ul li {
+    display: flex;
+    column-gap: 8px;
+    align-items: center;
+}
+main #fh2>ul div li {
+    color: var(--white);
+    text-align: center;
+}
+main #fh2>ul div ul li p {
+    color: var(--white);
+}
+main #fh2>ul div:last-child {
+    display: flex;
+}
+    
+
+
+
